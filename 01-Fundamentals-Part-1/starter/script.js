@@ -59,3 +59,17 @@ GOOD LUCK 😀
 // console.log("Mark's BMI = " + markBMI + ", " + "John's BMI = " + johnBMI);
 // let markHigherBMI = markBMI > johnBMI;
 // console.log(markHigherBMI);
+
+//Lesson: Strings
+let myFirstName = "JingSheng";
+const selfIntro = `I'm ${myFirstName}`;  //different symbol, called backticks, found around the tab key. `` can declare a normal string too.
+console.log(selfIntro, typeof selfIntro);
+
+//special thing about ``, no need \n\ to make new line
+console.log(`This
+is
+how 
+to 
+make 
+new
+lines.`);
