@@ -89,23 +89,70 @@ HINT: Use an if/else statement 😉
 GOOD LUCK 😀
 */
 
-solution:
-let height;
-let mass;
-let BMI;
-function CalculateBMI (mass, height){
-    BMI = mass / (height * height);
-    return BMI;
-}
+// solution:
+// let height;
+// let mass;
+// let BMI;
+// function CalculateBMI (mass, height){
+//     BMI = mass / (height * height);
+//     return BMI;
+// }
 
-let markBMI = CalculateBMI(78, 1.69);
-let johnBMI = CalculateBMI(95, 1.88);
+// let markBMI = CalculateBMI(78, 1.69);
+// let johnBMI = CalculateBMI(95, 1.88);
 
-if (markBMI > johnBMI)
-{
-    console.log(`Mark's BMI ${(markBMI)} is higher than John's ${(johnBMI)}!`);
-}
-else 
-{
-    console.log(`Mark's BMI ${(markBMI)} is higher than John's ${(johnBMI)}!`);
-}
+// if (markBMI > johnBMI)
+// {
+//     console.log(`Mark's BMI ${(markBMI)} is higher than John's ${(johnBMI)}!`);
+// }
+// else 
+// {
+//     console.log(`Mark's BMI ${(markBMI)} is higher than John's ${(johnBMI)}!`);
+// }
+
+// Lesson 17 
+// type coercion
+console.log('I am ' + 23 + ' years old'); // will automatically convert 23 to string for the '+' sign
+console.log('23' - '10' - 3); // will automatically convert 23 and 10 to numbers for the '-' sign
+// * and / will convert string to numbers also 
+let n = '1' + 1; // '11'
+n = n - 1; // n -> 10
+
+// Lesson 18
+// 5 falsy values: 0, '', undefined, null, NaN, if console.log all these values will return false
+
+// Lesson 19
+// "===" means strictly equal, doesnt perform type coercion, always use this to avoid complication
+// for eg. '18'=== 18 will return false, one is tring and another is number
+
+
+////////////////////////////////////
+// Coding Challenge #3
+
+/*
+There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins the a trophy!
+
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that as well (draw means they have the same average score).
+
+3. BONUS 1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it has a higher score than the other team, and the same time a score of at least 100 points. HINT: Use a logical operator to test for minimum score, as well as multiple else-if blocks 😉
+4. BONUS 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy.
+
+TEST DATA: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+TEST DATA BONUS 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+
+GOOD LUCK 😀
+*/
+
+let avgDolphin =  (96 + 108 + 89) / 3;
+let avgKoalas =  (96 + 108 + 89) / 3;
+if (avgDolphin > avgKoalas) console.log('Dolphins win the trophy 🏆')
+else if (avgDolphin === avgKoalas) console.log('Both win the trophy!')
+else if (avgKoalas > avgDolphin) console.log('Koalas win the trophy 🏆')
+
+// BONUS 1 & 2
+if (avgDolphin > avgKoalas && avgDolphin >= 100) console.log('Dolphins win the trophy 🏆')
+else if (avgDolphin === avgKoalas && avgDolphin >= 100 && avgKoalas >= 100) console.log('Both win the trophy!')
+else if (avgKoalas > avgDolphin && avgKoalas >= 100) console.log('Koalas win the trophy 🏆')
+
