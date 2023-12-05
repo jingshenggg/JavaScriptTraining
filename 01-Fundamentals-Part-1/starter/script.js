@@ -1,13 +1,13 @@
-let js = "amazing";
-console.log(1+1+1);
-let firstName = "JingSheng"
-console.log(firstName);
+// let js = "amazing";
+// console.log(1+1+1);
+// let firstName = "JingSheng"
+// console.log(firstName);
 
-// let -> mutable
-let javascriptIsFun = true;
-console.log(javascriptIsFun);
-javascriptIsFun = "becomestring?";
-console.log(javascriptIsFun);
+// // let -> mutable
+// let javascriptIsFun = true;
+// console.log(javascriptIsFun);
+// javascriptIsFun = "becomestring?";
+// console.log(javascriptIsFun);
 
 // only use const if you are sure that value will not change in the future
 // the below code will throw error because const cannot be reassigned (immutable)
@@ -18,16 +18,16 @@ console.log(javascriptIsFun);
 // const birthMonth;
 
 // var is the old way of declaring variable, dont use it now, use let instead
-var birthDate = 23;
+// var birthDate = 23;
 
 //operators
-const firstName1 = 'Jonas';
-const lastName1 = 'Nick';
-console.log(firstName1 + " " + lastName1);
+// const firstName1 = 'Jonas';
+// const lastName1 = 'Nick';
+// console.log(firstName1 + " " + lastName1);
 
-let ageJonas = 30;
-let ageSarah = 23;
-console.log(ageJonas < ageSarah);
+// let ageJonas = 30;
+// let ageSarah = 23;
+// console.log(ageJonas < ageSarah);
 
 
 // Coding Challenge #1
@@ -61,18 +61,18 @@ GOOD LUCK 😀
 // console.log(markHigherBMI);
 
 //Lesson: Strings
-let myFirstName = "JingSheng";
-const selfIntro = `I'm ${myFirstName}`;  //different symbol, called backticks, found around the tab key. `` can declare a normal string too.
-console.log(selfIntro, typeof selfIntro);
+// let myFirstName = "JingSheng";
+// const selfIntro = `I'm ${myFirstName}`;  //different symbol, called backticks, found around the tab key. `` can declare a normal string too.
+// console.log(selfIntro, typeof selfIntro);
 
 //special thing about ``, no need \n\ to make new line
-console.log(`This
-is
-how 
-to 
-make 
-new
-lines.`);
+// console.log(`This
+// is
+// how 
+// to 
+// make 
+// new
+// lines.`);
 
 
 ////////////////////////////////////
@@ -145,14 +145,55 @@ TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 GOOD LUCK 😀
 */
 
-let avgDolphin =  (96 + 108 + 89) / 3;
-let avgKoalas =  (96 + 108 + 89) / 3;
-if (avgDolphin > avgKoalas) console.log('Dolphins win the trophy 🏆')
-else if (avgDolphin === avgKoalas) console.log('Both win the trophy!')
-else if (avgKoalas > avgDolphin) console.log('Koalas win the trophy 🏆')
+// let avgDolphin =  (96 + 108 + 89) / 3;
+// let avgKoalas =  (96 + 108 + 89) / 3;
+// if (avgDolphin > avgKoalas) console.log('Dolphins win the trophy 🏆')
+// else if (avgDolphin === avgKoalas) console.log('Both win the trophy!')
+// else if (avgKoalas > avgDolphin) console.log('Koalas win the trophy 🏆')
 
 // BONUS 1 & 2
-if (avgDolphin > avgKoalas && avgDolphin >= 100) console.log('Dolphins win the trophy 🏆')
-else if (avgDolphin === avgKoalas && avgDolphin >= 100 && avgKoalas >= 100) console.log('Both win the trophy!')
-else if (avgKoalas > avgDolphin && avgKoalas >= 100) console.log('Koalas win the trophy 🏆')
+// if (avgDolphin > avgKoalas && avgDolphin >= 100) console.log('Dolphins win the trophy 🏆')
+// else if (avgDolphin === avgKoalas && avgDolphin >= 100 && avgKoalas >= 100) console.log('Both win the trophy!')
+// else if (avgKoalas > avgDolphin && avgKoalas >= 100) console.log('Koalas win the trophy 🏆')
 
+// Lesson 23: Switch Case
+let day = '';
+switch(day){
+    case "Monday": // day === "Monday", it does a strict comparison
+        console.log(`It is Monday!`);
+        break; //without the break, the code will continue to execute
+    case "Tuesday":
+        console.log(`It is Monday!`);
+        break;
+    default:
+        console.log(`not a valid day.`)
+}
+
+// Lesson 24: expression vs statement
+// expression is the code that produces values for exmaple 3+4, "Hello World"
+// statements usually end with ";"
+
+////////////////////////////////////
+// Coding Challenge #4
+
+/*
+Steven wants to build a very simple tip calculator for whenever he goes eating in a resturant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+
+1. Your task is to caluclate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+2. Print a string to the console containing the bill value, the tip, and the final value (bill + tip). Example: 'The bill was 275, the tip was 41.25, and the total value 316.25'
+
+TEST DATA: Test for bill values 275, 40 and 430
+
+HINT: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+HINT: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+
+GOOD LUCK 😀
+*/
+
+let tip1 = 15/100;
+let tip2 = 20/100;
+
+let bill = 275;
+let tipValue;
+tipValue = bill >= 50 && bill <= 300 ? bill*tip1 : bill*tip2;
+console.log(tipValue);
