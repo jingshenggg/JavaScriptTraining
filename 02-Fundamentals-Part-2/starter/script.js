@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 // Lesson 30 & 31
 // Function declaration -> can call the function before defining it
@@ -162,34 +162,146 @@ TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.9
 GOOD LUCK 😀
 */
 
-const Mark = {
-  fullName: 'Mark Miller',
-  mass: 78,
-  height: 1.69,
-  calBMI: function (){
-    this.bmi = this.mass / (this.height * this.height);
-    console.log(this.bmi);
-    return this.bmi
-  }
-};
+// const Mark = {
+//   fullName: 'Mark Miller',
+//   mass: 78,
+//   height: 1.69,
+//   calBMI: function (){
+//     this.bmi = this.mass / (this.height * this.height);
+//     console.log(this.bmi);
+//     return this.bmi
+//   }
+// };
 
-const John = {
-  fullName: 'John Smith',
-  mass: 92,
-  height: 1.95,
-  calBMI: function (){
-    this.bmi = this.mass / (this.height * this.height);
-    console.log(this.bmi);
-    return this.bmi
-  }
-};
+// const John = {
+//   fullName: 'John Smith',
+//   mass: 92,
+//   height: 1.95,
+//   calBMI: function (){
+//     this.bmi = this.mass / (this.height * this.height);
+//     console.log(this.bmi);
+//     return this.bmi
+//   }
+// };
 
-Mark.calBMI();
-John.calBMI();
+// Mark.calBMI();
+// John.calBMI();
 
-if (Mark.bmi > John.bmi) {
-  console.log(`${Mark.fullName}'s BMI(${Mark.bmi} is higher than ${John.fullName}'s BMI (${John.bmi}).)`)
-}
-else {
-  console.log(`${John.fullName}'s BMI(${John.bmi} is higher than ${Mark.fullName}'s BMI (${Mark.bmi}).)`)
-}
+// if (Mark.bmi > John.bmi) {
+//   console.log(`${Mark.fullName}'s BMI(${Mark.bmi} is higher than ${John.fullName}'s BMI (${John.bmi}).)`)
+// }
+// else {
+//   console.log(`${John.fullName}'s BMI(${John.bmi} is higher than ${Mark.fullName}'s BMI (${Mark.bmi}).)`)
+// }
+
+// Lesson 43: Loop
+// for loop keeps running while condition is true
+// for (let rep = 1; rep <= 10; rep++){
+//   console.log(`I did ${rep} rounds of lifting!`);
+// };
+
+const jonas = [
+  'Jonas',
+  'Schmedtmann',
+  2037 - 1991,
+  'teacher',
+  ['Michael', 'Peter', 'Steven'],
+  true
+];
+
+// const types = [];
+// for (let i = 0; i < jonas.length; i++) {
+//   // Reading from jonas array
+//   console.log(jonas[i], typeof jonas[i]);
+
+//   // Filling types array
+//   // types[i] = typeof jonas[i];
+//   types.push(typeof jonas[i]);
+// }
+// console.log(types);
+
+
+// continue will stop and go to the next iteration when condition is true 
+// for (let i = 0; i < jonas.length; i++) {
+//   if (typeof jonas[i] !== 'string') continue;
+
+//   console.log(jonas[i], typeof jonas[i]);
+// }
+// // break is break the loop completely
+// for (let i = 0; i < jonas.length; i++) {
+//   if (typeof jonas[i] === 'number') break;
+
+//   console.log(jonas[i], typeof jonas[i]);
+// }
+
+// for (let i = jonas.length-1; i>=0; i--) {
+//   console.log(i, jonas[i]);
+// };  
+// i=jonas.length-1
+
+// // use while loop when you dont know how many iterations
+// while (i>=0) {
+//   console.log(i, jonas[i]);
+//   i--;
+// };
+
+// if (100 === '100'){
+//   console.log(`this is true`);
+// };
+
+///////////////////////////////////////
+// Coding Challenge #4
+
+/*
+Let's improve Steven's tip calculator even more, this time using loops!
+
+1. Create an array 'bills' containing all 10 test bill values
+2. Create empty arrays for the tips and the totals ('tips' and 'totals')
+3. Use the 'calcTip' function we wrote before (no need to repeat) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!
+
+TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
+
+HINT: Call calcTip in the loop and use the push method to add values to the tips and totals arrays 😉
+
+4. BONUS: Write a function 'calcAverage' which takes an array called 'arr' as an argument. This function calculates the average of all numbers in the given array. This is a DIFFICULT challenge (we haven't done this before)! Here is how to solve it:
+  4.1. First, you will need to add up all values in the array. To do the addition, start by creating a variable 'sum' that starts at 0. Then loop over the array using a for loop. In each iteration, add the current value to the 'sum' variable. This way, by the end of the loop, you have all values added together
+  4.2. To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements)
+  4.3. Call the function with the 'totals' array
+
+GOOD LUCK 😀
+*/
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
+// const bill = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+// const tips = [];
+// i = 0;
+// while (i < bill.length){
+//   const tip = calcTip(bill[i]);
+//   tips.push(tip);
+//   i++;
+// };
+// console.log(tips);
+
+// const CalAverage = function(arr) {
+//   let sum = 0;
+//   i=0;
+//   while (i<arr.length) {
+//     sum += arr[i]; 
+//     i++;
+//   };
+//   return sum/arr.length;
+// };
+
+// console.log(CalAverage(bill));
+
+// const calcAverage = function (arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     // sum = sum + arr[i];
+//     sum += arr[i];
+//   }
+//   return sum / arr.length;
+// }
+
+// console.log(calcAverage(bill));
